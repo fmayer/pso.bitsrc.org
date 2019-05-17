@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<!--
+Copyright (c) 2013 Florian Mayer <florian.mayer@bitsrc.org>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<html>
+<head>
+	<title>Particle Swarm Optimization</title>
+
+	<meta charset="UTF-8">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<link rel="stylesheet" href="dist/ladda-themeless.min.css">
+	<script src="dist/spin.min.js"></script>
+	<script src="dist/ladda.min.js"></script>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="sylvester.js">
+	</script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="pso.js">
+
+
+
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<div>
+			<h1>What am I seeing?</h1>
+			<p>
+				This is an implementation and visualisation of the Particle Swarm Optimization algorithm and the ARPSO algorithm. It was done by Florian Mayer and was made possible by <a href="http://coffeescript.org/">CoffeeScript</a> and <a href="https://developers.google.com/chart/">Google Charts</a>; it was made better by <a href="http://getbootstrap.com/">Bootstrap</a>. Setting the target function is in development.
+			</p>
+			<h1>Visualization</h1>
+			<p>
+				Population: <input id="population" value="25"><br/>
+				Inertia: <input id="inertia" value="0.7298"><br/>
+				Phi1: <input id="phi1" value="1.49609"><br/>
+				Phi2: <input id="phi2" value="1.49609"><br/>
+				Function: <input id="function" value="1 + x^2 + y^2" disabled><br/>
+				<input type="checkbox" id="arpso">Use ARPSO<br>
+				<button class="btn btn-primary ladda-button" data-style="expand-left" id="run"><span class="ladda-label">Optimize</span></button>
+			</p>
+			<p>
+				<button type="button" class="btn btn-default btn-lg" id="play">
+					<span class="glyphicon glyphicon-play"></span> Play
+				</button>
+				<button type="button" class="btn btn-default btn-lg" id="stop">
+					<span class="glyphicon glyphicon-pause"></span> Pause
+				</button>
+			</p>
+		</div>
+
+		<div style="float:left; width: 50%;">
+			<div id="chart_div" style="height: 250px;"></div>
+			<div id="chart3_div" style="height: 250px;"></div>
+		</div>
+		<div id="chart2_div" style="float: left; width: 500px; height: 500px;"></div>
+
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+	</div>
+</body>
+
+</html>
